@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezilla </title>
+  <link rel="icon" href="favicon.gif" type="image/x-icon"> <!--favicon iamge showing next to teh tab name in the browser-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <i class="fas fa-map-marker-alt"></i> Rezilla, 18 Grattan St, Brooklyn
+    </div>
+    <div class="contact-info">
+      <i class="fas fa-phone-alt"></i> +1 206-214-2298
+      <i class="fas fa-envelope"></i> support@rezilla.com
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Listings</a>
+      <a href="#">Services</a>
+      <a href="#">Blogs</a>
+    </div>
+
+    <div class="logo">
+      <i class="fas fa-home"></i> Rezilla
+    </div>
+
+    <div class="nav-right">
+      <a href="#"><i class="fas fa-user"></i> Login/Register</a>
+      <a href="#" class="add-listing-btn"><i class="fas fa-home"></i> Add Listing</a>
+    </div>
+  </div>
+
+
+<!-- Hero Section -->
+<!--Hero part1-->
+<section class="hero">
+    <!-- Left Section -->
+    <div class="hero-left">
+      <!-- Text Content -->
+      <div class="text-content">
+        <h3>REAL ESTATE</h3>
+        <h1>Find a perfect home you love..!</h1>
+        <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
+      </div>
+  
+      <!-- Image Slider -->
+      <div class="slider-container">
+        <div class="slider">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Section (Search Form) -->
+    <div class="hero-right">
+      <!-- Tabs for Sale / Rent -->
+      <div class="form-tabs">
+        <button class="tab active" data-type="sale">For Sale</button>
+        <button class="tab" data-type="rent">For Rent</button>
+      </div>
+  
+      <!-- Search Form -->
+      <form class="search-form">
+        <input type="text" placeholder="New York, San Francisco, etc">
+        <select>
+          <option>Select Property Type</option>
+          <option>House</option>
+          <option>Apartment</option>
+          <option>Condo</option>
+        </select>
+        <select>
+          <option>Select Rooms</option>
+          <option>1 Room</option>
+          <option>2 Rooms</option>
+          <option>3+ Rooms</option>
+        </select>
+        <a href="#" class="advanced-search"><i class="fas fa-sliders-h"></i> Advanced Search</a>
+        <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+      </form>
+    </div>
+  </section>
+<!--Hero part 1 ends here-->
+<!--js for hero part1 starts here-->
+<script>
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider img');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+function showSlide(n) {
+  if (n < 0) {
+    index = slides.length - 1;
+  } else if (n >= slides.length) {
+    index = 0;
+  }
+  slider.style.transform = `translateX(${-index * 100}%)`;
+}
+
+next.addEventListener('click', () => {
+  index++;
+  showSlide(index);
+});
+
+prev.addEventListener('click', () => {
+  index--;
+  showSlide(index);
+});
+
+</script>
+<!--Hero part one js ends here-->
+<!-- Hero Part 2 -->
+<section class="hero-part-2">
+    <div class="info-boxes">
+      <div class="info-box">
+        <div class="avatars">
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-user-circle"></i>
+          <span>+</span>
+        </div>
+        <p>72k+ Happy Customers</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-home house-icon"></i>
+        <p>200+ New Listings Everyday!</p>
+      </div>
+    </div>
+  
+    <div class="trusted-companies">
+      <p>Trusted by 100+ Companies across the globe!</p>
+      <div class="company-logos">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-amazon"></i>   
+        <i class="fab fa-spotify"></i>
+      </div>
+    </div>
+  </section>
+<!--Hero part 2 ends here-->  
+
+
+<!-- Assisting Individuals Section -->
+<section class="assisting-individuals">
+    <!-- Left Side -->
+    <div class="assisting-left">
+      <h3>WHO ARE WE</h3>
+      <h2>Assisting individuals in locating the appropriate real estate.</h2>
+      <p>
+        Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. 
+        Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.
+      </p>
+  
+      <!-- Two Boxes with Icons -->
+      <div class="info-boxes-indv">
+        <div class="info-box-indv">
+          <i class="fas fa-wifi"></i>
+          <div class="box-content">
+            <h4>Donec porttitor euismod</h4>
+            <p>Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+          </div>
+        </div>
+        <div class="info-box-indv">
+          <i class="fas fa-user-circle"></i>
+          <div class="box-content">
+            <h4>Donec porttitor euismod</h4>
+            <p>Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Side: Image Grid -->
+    <div class="assisting-right">
+      <div class="image-grid">
+        <img src="image4.jpg" alt="Real Estate 1">
+        <img src="image5.jpg" alt="Real Estate 2">
+        <img src="image6.jpg" alt="Real Estate 3">
+      </div>
+    </div>
+</section>
+  
+  <!-- Include Font Awesome -->
+  
+
+  <!--Asisting indiviuals section-->
+
+
+  <!-- Property Section -->
+<!-- Latest Listed Properties Section -->
+<section class="latest-properties">
+    <!-- Header Section -->
+    <div class="property-header">
+      <div class="title">
+        <h3>Checkout Our New</h3>
+        <h2>Latest Listed Properties</h2>
+        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+      </div>
+      <div class="property-buttons">
+        <button class="active">All</button>
+        <button>Sell</button>
+        <button>Rent</button>
+      </div>
+    </div>
+  
+    <!-- Property Slider Section -->
+      <div class="property-slider">
+        <!-- Property Card 1 -->
+        <div class="property-card">
+          <div class="image-container">
+            <img src="image7.jpg" alt="Property 1">
+          </div>
+          <div class="property-details">
+            <p class="price">$5,970</p>
+            <p class="title">Tranquil Haven in the Woods</p>
+            <p class="location">103 Wright Court, Burien, WA 98168</p>
+            <div class="property-meta">
+              <span><i class="fas fa-bed"></i> 4 Beds</span>
+              <span><i class="fas fa-bath"></i> 3 Bath</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Property Card 2 -->
+        <div class="property-card">
+          <div class="image-container">
+            <img src="image8.jpg" alt="Property 2">
+          </div>
+          <div class="property-details">
+            <p class="price">$1,970</p>
+            <p class="title">Serene Retreat by the Lake</p>
+            <p class="location">1964 Jehovah Drive, VA 22408</p>
+            <div class="property-meta">
+              <span><i class="fas fa-bed"></i> 3 Beds</span>
+              <span><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Property Card 3 -->
+        <div class="property-card">
+          <div class="image-container">
+            <img src="image9.jpg" alt="Property 3">
+          </div>
+          <div class="property-details">
+            <p class="price">$3,450</p>
+            <p class="title">Charming Cottage in the Meadow</p>
+            <p class="location">1508 Centennial Farm, Harlan, 51537</p>
+            <div class="property-meta">
+              <span><i class="fas fa-bed"></i> 4 Beds</span>
+              <span><i class="fas fa-bath"></i> 4 Bath</span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Property Section ends here -->
+</section>
+<!-- Services Section -->
+<section class="services-section">
+    <div class="services-header">
+      <h3>OUR SERVICES</h3>
+      <h2>Donec porttitor euismod dignissim</h2>
+    </div>
+  
+    <div class="services-container">
+      <!-- Service 1 -->
+      <div class="service-box">
+        <div class="icon-container">
+          <i class="fas fa-search"></i> <!-- FontAwesome search icon -->
+        </div>
+        <h4>Buy a New Home</h4>
+        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+      </div>
+  
+      <!-- Service 2 -->
+      <div class="service-box">
+        <div class="icon-container">
+          <i class="fas fa-home"></i> <!-- FontAwesome home icon -->
+        </div>
+        <h4>Sell a House</h4>
+        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+      </div>
+  
+      <!-- Service 3 -->
+      <div class="service-box">
+        <div class="icon-container">
+          <i class="fas fa-bed"></i> <!-- FontAwesome bed icon -->
+        </div>
+        <h4>Rent a House</h4>
+        <p>Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--agent-->
+
+  <section class="agent-section">
+    <div class="container">
+        <div class="agent-content">
+            <div class="agent-image">
+                <img src="agent.gif" alt="Agent Image">
+            </div>
+            <div class="agent-text">
+                <h1>Become a Agent.</h1>
+                <p>Fusce venenatis tellus a felis scelerisque, venenatis tellus a felis scelerisque.</p>
+                <a href="#" class="btn">Register Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--agent end-->
+
+
+<!--footer-->
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <h2>Rezilla</h2>
+                <p>2728 Hickory Street<br>Salt Lake City, UT 84104</p>
+                <p><i class="phone-icon"></i> +1 206-214-2298</p>
+                <p><i class="email-icon"></i> support@rezilla.com</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Listings</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Become a Agent</a></li>
+                </ul>
+            </div>
+
+            <!-- Discovery Links -->
+            <div class="footer-column">
+                <h3>Discovery</h3>
+                <ul>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">United States</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">Africa</a></li>
+                    <li><a href="#">India</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter and Social Media -->
+            <div class="footer-column">
+                <h3>Subscribe to our Newsletter!</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">→</button>
+                </form>
+                <p>Follow Us on</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© Rezilla – All rights reserved</p>
+            <div class="footer-links">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+</body>
+</html>
